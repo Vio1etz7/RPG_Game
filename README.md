@@ -1,0 +1,3 @@
+### 这是一个unity开发初学项目，目标是开发一个可玩的2D横板RPG游戏，项目持续更新中...
+
+参考教程：[https://www.bilibili.com/video/BV1qN4MzKEp4/](https://www.bilibili.com/video/BV1qN4MzKEp4/)
