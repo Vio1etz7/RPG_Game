@@ -19,7 +19,7 @@ public class UI_MiniHealthBar : MonoBehaviour
         entity.OnFlipped -= HandleFlip;
     }
 
-    // Update is called once per frame
+    
     private void HandleFlip() => transform.rotation = Quaternion.identity;
     
 }

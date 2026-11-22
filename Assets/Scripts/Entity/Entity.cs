@@ -8,6 +8,7 @@ public class Entity : MonoBehaviour
 
     public Animator anim { get; private set; }
     public Rigidbody2D rb { get; private set; }
+    public Entity_Stats stats { get; private set; }
     protected StateMachine stateMachine;
 
     private bool isFacingRight = true;
@@ -26,7 +27,8 @@ public class Entity : MonoBehaviour
 
     //condition variable
     private bool isKnocked;
-    private Coroutine knockBackCoroutine;
+    private Coroutine knockBackCo;
+    private Coroutine slowDownCoro;
 
 
 
@@ -35,6 +37,7 @@ public class Entity : MonoBehaviour
     {
         anim = GetComponentInChildren<Animator>();
         rb = GetComponent<Rigidbody2D>();
+        stats = GetComponent<Entity_Stats>();
 
         stateMachine = new StateMachine();
 
@@ -65,12 +68,24 @@ public class Entity : MonoBehaviour
 
     } 
 
+    public virtual void SlowDownEntity(float slowMultiplier, float duration)
+    {
+        if (slowDownCoro != null)
+            StopCoroutine(slowDownCoro);
+        slowDownCoro = StartCoroutine(slowDownEntityCo(duration,slowMultiplier));
+    }
+
+    protected virtual IEnumerator slowDownEntityCo(float duration,float slowMultiplier)
+    {
+        yield return null;
+    }
+
     public void ReveiveKnockBack(Vector2 knockBack,float duration)
     {
-        if(knockBackCoroutine != null)
-            StopCoroutine(knockBackCoroutine);
+        if(knockBackCo != null)
+            StopCoroutine(knockBackCo);
      
-        knockBackCoroutine = StartCoroutine(KnockBackCo(knockBack,duration));
+        knockBackCo = StartCoroutine(KnockBackCo(knockBack,duration));
     }
 
     private IEnumerator KnockBackCo(Vector2 knockBack,float duration)
