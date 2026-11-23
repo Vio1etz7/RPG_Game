@@ -16696,25 +16696,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f1a065d108c11f43aa749c16add0bf0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  defaultStatSetup: {fileID: 11400000, guid: 0a5c5a6635bd8a648a1f5f1048584905, type: 2}
   resources:
     maxHealth:
       baseValue: 1000
       modifiers: []
     healthRegen:
       baseValue: 40
-      modifiers: []
-  major:
-    strength:
-      baseValue: 0
-      modifiers: []
-    agility:
-      baseValue: 0
-      modifiers: []
-    intelligence:
-      baseValue: 0
-      modifiers: []
-    vitality:
-      baseValue: 0
       modifiers: []
   offense:
     attackSpeed:
@@ -16755,6 +16743,19 @@ MonoBehaviour:
       baseValue: 0
       modifiers: []
     lightningRes:
+      baseValue: 0
+      modifiers: []
+  major:
+    strength:
+      baseValue: 0
+      modifiers: []
+    agility:
+      baseValue: 0
+      modifiers: []
+    intelligence:
+      baseValue: 0
+      modifiers: []
+    vitality:
       baseValue: 0
       modifiers: []
 --- !u!114 &1380910973
@@ -58890,24 +58891,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f1a065d108c11f43aa749c16add0bf0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  defaultStatSetup: {fileID: 11400000, guid: 805ddc8c3bf9f1c4693338b79253e1d2, type: 2}
   resources:
     maxHealth:
-      baseValue: 1000
+      baseValue: 100
       modifiers: []
     healthRegen:
-      baseValue: 0
-      modifiers: []
-  major:
-    strength:
-      baseValue: 0
-      modifiers: []
-    agility:
-      baseValue: 0
-      modifiers: []
-    intelligence:
-      baseValue: 0
-      modifiers: []
-    vitality:
       baseValue: 0
       modifiers: []
   offense:
@@ -58915,13 +58904,13 @@ MonoBehaviour:
       baseValue: 1
       modifiers: []
     damage:
-      baseValue: 150
+      baseValue: 10
       modifiers: []
     critPower:
-      baseValue: 0
+      baseValue: 150
       modifiers: []
     critChance:
-      baseValue: 0
+      baseValue: 10
       modifiers: []
     armorReduction:
       baseValue: 0
@@ -58949,6 +58938,19 @@ MonoBehaviour:
       baseValue: 0
       modifiers: []
     lightningRes:
+      baseValue: 0
+      modifiers: []
+  major:
+    strength:
+      baseValue: 0
+      modifiers: []
+    agility:
+      baseValue: 0
+      modifiers: []
+    intelligence:
+      baseValue: 0
+      modifiers: []
+    vitality:
       baseValue: 0
       modifiers: []
 --- !u!114 &1645082470
