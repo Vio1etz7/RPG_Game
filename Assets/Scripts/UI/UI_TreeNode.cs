@@ -1,0 +1,72 @@
+using UnityEngine;
+using UnityEngine.EventSystems;
+using UnityEngine.UI;
+
+public class UI_TreeNode : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerDownHandler
+{
+    [SerializeField] private Image skillIcon;
+    private string lockerColorHex = "#9F9797";
+    private Color lastColor;
+    public bool isUnlocked;
+    public bool isLocked;
+
+
+    private void Awake()
+    {
+        UpdateIconColor(GetColorByHex(lockerColorHex));
+    }
+
+    private void Unlock()
+    {
+        isUnlocked = true;
+        UpdateIconColor(Color.white);
+
+        //找到Player_SkillManager
+        // 在 skill manager中解锁skill
+    }
+
+    //改变技能的视觉效果，解锁技能
+    private bool CanBeUnlocker()
+    {
+        if (isUnlocked || isLocked)
+            return false;
+
+        return true;
+    }
+
+    private void UpdateIconColor(Color color)
+    {
+        if (skillIcon == null)
+            return;
+
+        lastColor = skillIcon.color;
+        skillIcon.color = color;
+    }
+
+    public void OnPointerDown(PointerEventData eventData)
+    {
+        if (CanBeUnlocker())
+            Unlock();
+        else
+            Debug.Log("Cannot be unlocked.");
+    }
+
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        if (isUnlocked == false)
+            UpdateIconColor(Color.white * .9f);
+    }
+
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        if (isUnlocked == false)
+            UpdateIconColor(lastColor);
+    }
+
+    private Color GetColorByHex(string hexNumber)
+    {
+        ColorUtility.TryParseHtmlString(hexNumber,out Color color);
+        
+        return color;
+    }
+}
