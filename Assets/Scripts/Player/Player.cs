@@ -26,7 +26,7 @@ public class Player : Entity
     public float comboResetTime = 1;
     private Coroutine queuedAttackCo;
 
-    [Header("Movement details")]
+    [Header("Movement connectionDetails")]
     public float moveSpeed = 5f;
     public float jumpForce = 5f;
     public Vector2 wallJumpForce;

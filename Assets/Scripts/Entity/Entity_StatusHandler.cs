@@ -9,7 +9,7 @@ public class Entity_StatusHandler : MonoBehaviour
     private Entity_Health entityHealth;
     private ElementType currentEffect = ElementType.None;
 
-    [Header("Electrify effect details")]
+    [Header("Electrify effect connectionDetails")]
     [SerializeField] private GameObject LightningStrikeVfx;
     [SerializeField] private float currentCharge;
     [SerializeField] private float maximumCharge = 1;

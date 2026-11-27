@@ -14,7 +14,7 @@ public class Object_Buff : MonoBehaviour
     private SpriteRenderer sr;
     private Entity_Stats statsToModify;
 
-    [Header("Buff details")]
+    [Header("Buff connectionDetails")]
     [SerializeField] private buff[] buffs;
     [SerializeField] private string buffName;
     [SerializeField] private float buffDuration = 4f;

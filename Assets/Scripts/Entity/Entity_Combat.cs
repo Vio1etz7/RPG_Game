@@ -11,7 +11,7 @@ public class Entity_Combat : MonoBehaviour
     [SerializeField] private float targetCheckRadius = 1;
     [SerializeField] private LayerMask whatIsTarget;
 
-    [Header("Status Effect details")]
+    [Header("Status Effect connectionDetails")]
     [SerializeField] private float defaultDuration = 3;
     [SerializeField] private float chillSlowMultiplier = 0.2f;
     [SerializeField] private float electrifyChargeBuildUp = .4f;

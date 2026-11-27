@@ -11,19 +11,19 @@ public class Enemy : Entity
     public Enemy_DeadState deadState;
     public Enemy_StunnedState stunnedState;
 
-    [Header("Battle details")]
+    [Header("Battle connectionDetails")]
     public float battleMoveSpeed = 3f;
     public float attackDistance = 2f;
     public float battleTimeDuration = 5f;
     public float minRetreatDistance = 1f;
     public Vector2 retreatVelocity;
 
-    [Header("Stunned state details")]
+    [Header("Stunned state connectionDetails")]
     public float stunnedDuration = 1;
     public Vector2 stunnedVelocity = new Vector2(7, 7);
     [SerializeField] protected bool canBeStunned;
 
-    [Header("Movement details")]
+    [Header("Movement connectionDetails")]
     public float idleTime = 2f;
     public float moveSpeed = 1.4f;
     [Range(0,2)]

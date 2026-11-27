@@ -6,7 +6,7 @@ public class Object_Chest : MonoBehaviour, IDamagable
     private Animator anim => GetComponentInChildren<Animator>();
     private Entity_VFX fx => GetComponent<Entity_VFX>();
 
-    [Header("Open details")]
+    [Header("Open connectionDetails")]
     public Vector2 knockback;
 
     public bool TakeDamage(float damage,float elementalDamage,ElementType element, Transform damageDealer)
